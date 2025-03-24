@@ -55,3 +55,47 @@ VALUES
     TRUE,
     'cover_letter5.pdf',
     'submitted');
+
+
+
+-- ALTER TABLE Command ---
+--ALTER TABLE job_applied
+--ADD col_name data_type;
+
+--ALTER TABLE job_applied
+--DROP COLUMN col_name;
+
+--ALTER TABLE job_applied
+--MODIFY COLUMN col_name data_type;
+
+--ALTER TABLE job_applied
+--RENAME COLUMN col_name TO new_col_name;
+
+ALTER TABLE job_applied
+ADD contact VARCHAR(50);
+
+
+SELECT *
+FROM job_applied;
+
+-- UPDATE Command ---
+
+UPDATE job_applied
+SET contact = 'John Doe'
+WHERE job_id = 1;
+
+UPDATE job_applied
+SET contact = 'John Cena'
+WHERE job_id = 2;
+
+UPDATE job_applied
+SET contact = 'Maddison Wick'
+WHERE job_id = 3;
+
+UPDATE job_applied
+SET contact = 'Dinesh kartik'
+WHERE job_id = 4;
+
+UPDATE job_applied
+SET contact = 'Rohit Sharma'
+WHERE job_id = 5;
