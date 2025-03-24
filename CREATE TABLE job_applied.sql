@@ -59,7 +59,9 @@ VALUES
 
 
 -- ALTER TABLE Command ---
---ALTER TABLE job_applied
+-- Used to add, delete, modify columns in an existing table.
+-- syntax:
+--ALTER TABLE table_name
 --ADD col_name data_type;
 
 --ALTER TABLE job_applied
@@ -74,11 +76,24 @@ VALUES
 ALTER TABLE job_applied
 ADD contact VARCHAR(50);
 
+-- rename column contact to contact_name
+ALTER TABLE job_applied
+RENAME COLUMN contact TO contact_name;
+
+-- modify column contact_name datatype to TEXT type
+ALTER TABLE job_applied
+ALTER COLUMN contact_name TYPE TEXT;
+
 
 SELECT *
 FROM job_applied;
 
 -- UPDATE Command ---
+-- Used to modify the existing records in a table.
+-- sytax: 
+--UPDATE table_name
+--SET col_name = value
+--WHERE condition;
 
 UPDATE job_applied
 SET contact = 'John Doe'
@@ -99,3 +114,14 @@ WHERE job_id = 4;
 UPDATE job_applied
 SET contact = 'Rohit Sharma'
 WHERE job_id = 5;
+
+
+-- DROP COlumn Command ---
+-- Used to delete a column from an existing table.
+ALTER TABLE job_applied
+DROP COLUMN contact_name;
+
+
+--DROP TABLE Command ---
+-- Used to delete an existing table.
+DROP TABLE job_applied;
