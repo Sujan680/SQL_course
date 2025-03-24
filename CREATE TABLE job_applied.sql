@@ -7,3 +7,51 @@ CREATE TABLE job_applied (
     cover_letter_file_name VARCHAR(255),
     status VARCHAR(255)
 );
+
+SELECT *
+FROM job_applied;
+
+INSERT INTO job_applied 
+    (job_id, 
+    application_sent_date, 
+    custom_resume, 
+    resume_file_name, 
+    cover_letter_sent, 
+    cover_letter_file_name, 
+    status)
+VALUES 
+    (1, 
+    '2021-01-01', 
+    TRUE, 
+    'resume1.pdf', 
+    TRUE, 
+    'cover_letter1.pdf', 
+    'submitted'),
+    (2, 
+    '2021-01-02', 
+    FALSE, 
+    'resume2.pdf', 
+    FALSE, 
+    'cover_letter2.pdf', 
+    'rejected'),
+    (3, 
+    '2021-01-03', 
+    TRUE, 
+    'resume3.pdf', 
+    TRUE, 
+    'cover_letter3.pdf', 
+    'accepted'),
+    (4,
+    '2021-01-04',
+    FALSE,
+    'resume4.pdf',
+    FALSE,
+    'cover_letter4.pdf',
+    'pending'),
+    (5,
+    '2021-01-05',
+    TRUE,
+    'resume5.pdf',
+    TRUE,
+    'cover_letter5.pdf',
+    'submitted');
